@@ -53,7 +53,7 @@ class OrderPrinter {
         echo "Book Title: " . $order->getBook()->getTitle() . "\n";
         echo "Author: " . $order->getBook()->getAuthor() . "\n";
         echo "Quantity: " . $order->getQuantity() . "\n";
-        echo "Total Price: $" . $order->calculateTotalPrice() . "\n";
+        echo "Total Price: Rp" . $order->calculateTotalPrice() . "\n";
     }
 }
 
@@ -70,7 +70,7 @@ class OrderRepository {
     }
 }
 
-$book = new Book("The Great Gatsby", "F. Scott Fitzgerald", 10.99);
+$book = new Book("Rich Dad Poor Dad", " Robert T. Kiyosaki and Sharon Lechter", 68000);
 $order = new Order($book, 2);
 $orderPrinter = new OrderPrinter();
 $orderPrinter->printOrderDetails($order);
