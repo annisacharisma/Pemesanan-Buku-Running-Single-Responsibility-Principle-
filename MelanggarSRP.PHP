@@ -22,7 +22,7 @@ class BookOrder {
         echo "Book Title: " . $this->title . "\n";
         echo "Author: " . $this->author . "\n";
         echo "Quantity: " . $this->quantity . "\n";
-        echo "Total Price: $" . $this->calculateTotalPrice() . "\n";
+        echo "Total Price: Rp" . $this->calculateTotalPrice() . "\n";
     }
 
     public function saveOrder() {
@@ -39,7 +39,7 @@ class BookOrder {
     }
 }
 
-$order = new BookOrder("The Great Gatsby", "F. Scott Fitzgerald", 10.99, 2);
+$order = new BookOrder("Rich Dad Poor Dad", " Robert T. Kiyosaki and Sharon Lechter", 68000, 2);
 $order->calculateTotalPrice();
 $order->printOrderDetails();
 $order->saveOrder();
